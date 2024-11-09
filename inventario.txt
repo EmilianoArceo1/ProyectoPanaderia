@@ -1,0 +1,4 @@
+Pera 1
+Manzana 1
+Durazno 20
+Platano 20
