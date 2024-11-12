@@ -7,9 +7,11 @@ import java.util.Map;
 public class Inventario {
     private Map<String, Integer> productos;
     private Archivo inventario;
+    private Archivo pedidos;
 
     public Inventario() {
         inventario = new Archivo("inventario.txt");
+        pedidos = new Archivo("pedidos.txt");
         productos = new HashMap<>(); 
         if(!inventario.esArchivoVacio()){
             llenarInventario(inventario.leerDatos());
@@ -64,6 +66,15 @@ public class Inventario {
         }
     }
 
+     
+    public void levantarPedido(Pedido pedido){
+        pedidos.guardarDatos(pedido.toString());
+    }
+    
+    public ArrayList<String> getPedidos(){
+        return pedidos.leerDatos();
+    }
+    
     private void actualizarArchivo() {
         inventario.eliminarDatos();
         for (Map.Entry<String, Integer> entry : productos.entrySet()) {
@@ -71,6 +82,7 @@ public class Inventario {
             inventario.guardarDatos(linea);
         }
     }
+    
 
     public Map<String, Integer> getInventario() {
         return productos;
