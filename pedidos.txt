@@ -1,0 +1,5 @@
+Pedido{id=1, producto=pera, cantidad=4, estado=pendiente, prioridad=normal}
+Pedido{id=1, producto=pera, cantidad=4, estado=pendiente, prioridad=normal}
+Pedido{id=1, producto=pera, cantidad=4, estado=pendiente, prioridad=normal}
+Pedido{id=1, producto=pera, cantidad=4, estado=pendiente, prioridad=normal}
+Pedido{id=1, producto=pera, cantidad=4, estado=pendiente, prioridad=normal}

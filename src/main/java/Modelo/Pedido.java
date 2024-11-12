@@ -1,23 +1,16 @@
 package Modelo;
 
-import java.util.Date;
-import java.sql.Time;
-
 public class Pedido {
     private int id;
     private String producto;
     private int cantidad;
-    private Date fechaEntrega;
-    private Time horaEntrega;
     private String estado;
     private String prioridad;
 
-    public Pedido(int id, String producto, int cantidad, Date fechaEntrega, Time horaEntrega) {
+    public Pedido(int id, String producto, int cantidad) {
         this.id = id;
         this.producto = producto;
         this.cantidad = cantidad;
-        this.fechaEntrega = fechaEntrega;
-        this.horaEntrega = horaEntrega;
         this.estado = "pendiente";
         this.prioridad = "normal";
     }
@@ -53,23 +46,7 @@ public class Pedido {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-
-    public Date getFechaEntrega() {
-        return fechaEntrega;
-    }
-
-    public void setFechaEntrega(Date fechaEntrega) {
-        this.fechaEntrega = fechaEntrega;
-    }
-
-    public Time getHoraEntrega() {
-        return horaEntrega;
-    }
-
-    public void setHoraEntrega(Time horaEntrega) {
-        this.horaEntrega = horaEntrega;
-    }
-
+    
     public String getEstado() {
         return estado;
     }
@@ -84,5 +61,10 @@ public class Pedido {
 
     public void setPrioridad(String prioridad) {
         this.prioridad = prioridad;
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" + "id=" + id + ", producto=" + producto + ", cantidad=" + cantidad + ", estado=" + estado + ", prioridad=" + prioridad + '}';
     }
 }
